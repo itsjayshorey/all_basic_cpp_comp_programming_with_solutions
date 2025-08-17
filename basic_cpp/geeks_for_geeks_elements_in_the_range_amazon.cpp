@@ -6,7 +6,7 @@ class Solution {
     bool check_elements(int arr[], int n, int A, int B) {
         // Your code goes here
         int k = B-A+1;
-        int check[k] = {0};
+        int* check = new int[k]();
         for(int i=0;i<n;i++)
         {
             if(arr[i]<=B && arr[i]>=A)
@@ -18,9 +18,11 @@ class Solution {
         {
             if(check[i]==0)
             {
+                delete[] check;
                 return false;
             }
         }
+        delete[] check;
         return true;
     }
 };

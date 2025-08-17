@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 // Function to determine which country is at war
 class Solution {
 
